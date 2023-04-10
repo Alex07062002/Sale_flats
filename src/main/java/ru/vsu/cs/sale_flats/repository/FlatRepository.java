@@ -1,0 +1,20 @@
+package ru.vsu.cs.sale_flats.repository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import ru.vsu.cs.sale_flats.entity.Flat;
+
+public interface FlatRepository extends JpaRepository<Flat, Integer> {
+
+
+	/*@Query("select flt from Flat flt where flt.floor.id = ?1 and not exists " +
+			"(select con from Contract con where con.flat = flt) and flt.typeOwnerOfFlat='free'")
+	*/Page<Flat> findAllByFloor_Id(int floorId, Pageable pagination);
+
+	/*@Query("select count(flt) from Flat flt where flt.floor.id = ?1 and not exists " +
+			"(select con from Contract con where con.flat = flt) and flt.typeOwnerOfFlat='free'")
+	*/long countByFloor_Id(int id);
+}
