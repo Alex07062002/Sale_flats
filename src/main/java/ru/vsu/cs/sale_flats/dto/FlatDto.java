@@ -10,7 +10,12 @@ import java.math.BigDecimal;
 /**
  * A DTO for the {@link ru.vsu.cs.sale_flats.entity.Flat} entity
  */
-public record FlatDto(Integer id, @NotNull Integer numberOfRooms, @NotNull Integer entrance, @NotNull BigDecimal cost,
-					  @NotNull BigDecimal square, OwnerType typeOwnerOfFlat,
-					  PriceType typePrice) implements Serializable {
+public record FlatDto(Integer id,
+					  @NotNull Integer numberOfRooms,
+					  @NotNull Integer entrance,
+					  @NotNull BigDecimal cost,
+					  @NotNull BigDecimal square,
+					  OwnerType typeOwnerOfFlat,
+					  PriceType typePrice
+) implements Serializable {
 }

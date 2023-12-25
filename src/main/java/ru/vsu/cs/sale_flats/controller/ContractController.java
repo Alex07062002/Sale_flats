@@ -31,4 +31,5 @@ public class ContractController {
 		return "contracts";
 	}
 
+
 }
