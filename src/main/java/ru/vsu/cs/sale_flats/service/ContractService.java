@@ -5,7 +5,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 import ru.vsu.cs.sale_flats.dto.ContractTableDto;
-import ru.vsu.cs.sale_flats.dto.ContractTableEditDto;
 import ru.vsu.cs.sale_flats.dto.PaginationDto;
 import ru.vsu.cs.sale_flats.entity.Contract;
 import ru.vsu.cs.sale_flats.entity.Person;
